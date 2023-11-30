@@ -9,59 +9,52 @@ body{
     background-color: black;
     color: white;
 }
-ul{
-    display: none;
-    flex-direction: column;
-    transition: all 0.7s ease;
-   
+
+.ul-menu{
+    display: flex;
+
 }
-ul li{
+.li-menu{
     list-style: none;
-    margin-top: 5px;
-    margin-left: 5px;
+    margin-right: 70px;
     color: white;
     padding: 0;
    
 }
-a{
+.li-menu a{
     color: white;
     text-decoration: none;
     display: block;
+    font-size: 30px;
+}
+.li-menu a:hover{
+   color: gray;
+}
+
+.container-conteudo{
+    max-width: 1300px;
+    margin: auto;
 }
 
 /**especificas*/
-
-.loader-container{
-    display: flex;
-  
-   
-}
 .cabeçalho{
-    min-height: 100vh;
-    background-color:rgb(51,51,51);
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
-.menu-fechado{
-    width: 70px;
-    transition: all 0.7s ease;
-}
-nav{
+.navegation{
     display: flex;
+    transition: all 1s ease;
+    justify-self: center;
 }
-.menu{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   background-color:rgb(221, 19, 19);
-}
-
-.header-mobile{
-    display: flex;
+.menu-mobile{
+    display: none;
     flex-direction: column;
-    padding: 10px;
-    cursor: pointer;
 }
 
-.header-mobile-bar{
+.mobile-bar{
     width: 30px;
     height: 5px;
     background-color: white;
@@ -70,63 +63,54 @@ nav{
 
 
 .corpo{
-    width: 100vw;
+    width: 100%;
 }
-.page{
-    display: flex;
-    align-items: center;
-    justify-content:flex-start;
-    padding-left: 30px;
-    margin-bottom: 40px;
-}
-.page-logo{
-    margin-top: 30px;
-}
-.page-link h1{
-    margin-top: 30px;
-    font-size: 42px;
-    margin-left: 30px;
-}
+
 .page2{
     background-image: url(../assets/IMG/dsOTU.png);
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 .img img{
     width: 100%;
 }
 .busca{
-    margin-top: 35px;
-    margin-right: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 150px;
+    margin-bottom: 50px;
 }
 .busca-area{
-    display: flex;
+    display: none;
     align-items: center;
 }
 #select{
-    background-color: rgb(127,127,127)
-    ;
+    background-color: rgb(127,127,127);
 }
 .button{
     background-color: black;
     color: white;
     text-transform: uppercase;
-    padding: 10px;
+    padding: 15px;
     font-size: 10px;
     cursor: pointer;
     display: inline-block;
+    margin-top: 10px;
     margin-left: 5px;
-}
-.page3{
-   
 }
 .video-area{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 600px 600px;
+    justify-content: center;
+}
+.video1{
+    border: 1px solid white;
+    margin: 10px;
 }
 .video1 video{
     width: 100%;
@@ -136,54 +120,247 @@ nav{
 
 @media (min-width: 1025px) and (max-width:1440px){
     .page2{
-        background-size: contain;
+        background-size: cover;
     }
+
 }
 
 @media (min-width: 768px) and (max-width:1024px){
+    .container-conteudo{
+        max-width: 924px;
+    }
+    .li-menu{
+        margin-right: 50px;
+    }
+    .li-menu a{
+        font-size: 20px;
+    }
+    .logo{
+        padding-left: 30px;
+    }
     .page-link h1{
         font-size: 30px;
+    }
+    .page2{
+        background-position: center;
     }
 
 }
 @media (min-width: 425px) and (max-width:767px){
+    .page{
+        flex-direction: column;
+        padding-left: 0;
+    }
+    .container-conteudo{
+        max-width: 300px;
+    }
+    .cabeçalho{
+        grid-template-columns: 50px 250px;
+    }
+    .ul-menu{
+        width: 287px;
+        height: 132px;
+        margin-top: -102px;
+        margin-left: 50px;
+        background-color: black;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+    }
+    .li-menu{
+        margin-top: 15px;
+        margin-left: 10px;
+        margin-right: 0;
+    }
+    .li-menu a{
+        font-size: 16px;
+    }
+    .menu-mobile{
+        display: flex;
+        justify-self: center;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+    }
+    .logo{
+        justify-self: center;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    .page{
+        flex-direction: column;
+        padding-left: 0;
+    }
+    .navegation{
+        display: none;
+    }
+    .ul-menu{
+        flex-direction: column;
+    }
+ 
     .page-link h1{
-        font-size: 23px;
+        font-size: 10px;
+    }
+    .page2{
+        background-position:center;
+    }
+    .busca{
+        margin-right: 0;
+    }
+    .busca-area{
+        flex-direction: column-reverse;
+        margin-top: 5px;
+    }
+    .busca-select{
+        margin-top: 5px;
+    }
+    .button{
+        margin-left:0 ;
+    }
+    .busca-title h1{
+        display: inline-block;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    .video-area{
+        display: flex;
+        flex-direction: column;
     }
 }
 
 @media (min-width: 375px) and (max-width:424px){
+    .container-conteudo{
+        max-width: 300px;
+    }
+    .cabeçalho{
+        grid-template-columns: 50px 250px;
+    }
+    .ul-menu{
+        width: 262px;
+        height: 132px;
+        margin-top: -102px;
+        margin-left: 50px;
+        background-color: black;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+    }
+    .li-menu{
+        margin-top: 15px;
+        margin-left: 10px;
+        margin-right: 0;
+    }
+    .li-menu a{
+        font-size: 16px;
+    }
+    .menu-mobile{
+        display: flex;
+        justify-self: center;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+    }
+    .logo{
+        justify-self: center;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
     .page{
         flex-direction: column;
         padding-left: 0;
     }
+    .navegation{
+        display: none;
+    }
+    .ul-menu{
+        flex-direction: column;
+    }
+    .page{
+        flex-direction: column;
+        padding-left: 0;
+    }
+
     .page-link h1{
         text-align: center;
-        font-size: 12px;
+        font-size: 9px;
         margin-left: 0;
     }
+    .busca{
+        margin-right: 0;
+    }
     .busca-title h1{
-        font-size: 20px;
+        font-size: 15px;
     }
     .busca-area{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     .busca-area{
         margin-top: 5px;
+        align-items: flex-start;
+    }
+    .busca-select{
+        margin-top: 5px;
     }
     .button{
-        margin-top: 10px;
+        margin-left:0 ;
     }
     .button a {
         font-size: 9px;
     }
+    .video-area{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media (min-width: 320px) and (max-width:374px){
+    .container-conteudo{
+        max-width: 220px;
+    }
+    .container-conteudo{
+        max-width: 300px;
+    }
+    .cabeçalho{
+        grid-template-columns: 50px 250px;
+    }
+    .ul-menu{
+        width: 235px;
+        height: 132px;
+        margin-top: -102px;
+        margin-left: 50px;
+        background-color: black;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+    }
+    .li-menu{
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 0;
+    }
+    .li-menu a{
+        font-size: 16px;
+    }
+    .menu-mobile{
+        display: flex;
+        justify-self: center;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+    }
+    .logo{
+        justify-self: center;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
     .page{
         flex-direction: column;
         padding-left: 0;
     }
+    .ul-menu{
+        flex-direction: column;
+    }
+    
     .page-link h1{
         text-align: center;
         font-size: 10px;
@@ -193,10 +370,13 @@ nav{
         font-size: 15px;
         margin-left: 5px;
     }
+
     .busca-area{
-        flex-direction: column;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+
     }
-    .busca-area{
+    .busca-select{
         margin-top: 5px;
     }
     .button{
@@ -207,6 +387,10 @@ nav{
     }
     .busca-select form{
         margin-left: 5px;
+    }
+    .video-area{
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -220,6 +404,12 @@ nav{
         font-size: 10px;
         margin-left: 0;
     }
+    .menu-fechado-desktop{
+        display: none;
+ 
+     }.menu-fechado-mobile{
+         display: flex;
+     }
     .busca-title h1{
         font-size: 15px;
         margin-left: 5px;
@@ -238,6 +428,10 @@ nav{
     }
     .busca-select form{
         margin-left: 5px;
+    }
+    .video-area{
+        display: flex;
+        flex-direction: column;
     }
 }
 
