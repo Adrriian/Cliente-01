@@ -1,15 +1,32 @@
+/**inicio do menu */
+
+const menu = document.querySelector('.menu-mobile');
+menu.addEventListener('click', clicou);
+
 function clicou(){
-    const navegation = document.querySelector('.navegation');
+    const ul = document.querySelector('.ul-menu');
     
-    if(navegation.style.display == 'flex'){
-        navegation.style.display = 'none';
+    if(ul.style.display == 'flex'){
+        ul.style.display = 'none';
     } else {
-        navegation.style.display = 'flex';
+        ul.style.display = 'flex';
     }
 
 
 };
 
-const menu = document.querySelector('.menu-mobile');
-menu.addEventListener('click', clicou);
+/**fim do menu */
 
+const button = document.querySelector('.button');
+button.addEventListener('click', busca);
+
+function busca(){
+    const estado = document.querySelector('.busca-area')
+
+    if(estado.style.display == 'flex'){
+        estado.style.display = 'none';
+    } else {
+        estado.style.display = 'flex';
+    }
+
+}

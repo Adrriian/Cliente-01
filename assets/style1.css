@@ -46,7 +46,6 @@ body{
 }
 .navegation{
     display: flex;
-    transition: all 1s ease;
     justify-self: center;
 }
 .menu-mobile{
@@ -88,10 +87,9 @@ body{
 .busca-area{
     display: none;
     align-items: center;
+    margin: 10px;
 }
-#select{
-    background-color: rgb(127,127,127);
-}
+
 .button{
     background-color: black;
     color: white;
@@ -158,6 +156,7 @@ body{
         grid-template-columns: 50px 250px;
     }
     .ul-menu{
+        display: none;
         width: 287px;
         height: 132px;
         margin-top: -102px;
@@ -191,9 +190,7 @@ body{
         flex-direction: column;
         padding-left: 0;
     }
-    .navegation{
-        display: none;
-    }
+  
     .ul-menu{
         flex-direction: column;
     }
@@ -236,6 +233,7 @@ body{
         grid-template-columns: 50px 250px;
     }
     .ul-menu{
+        display: none;
         width: 262px;
         height: 132px;
         margin-top: -102px;
@@ -269,9 +267,7 @@ body{
         flex-direction: column;
         padding-left: 0;
     }
-    .navegation{
-        display: none;
-    }
+ 
     .ul-menu{
         flex-direction: column;
     }
@@ -324,6 +320,7 @@ body{
         grid-template-columns: 50px 250px;
     }
     .ul-menu{
+        display: none;
         width: 235px;
         height: 132px;
         margin-top: -102px;
@@ -404,12 +401,7 @@ body{
         font-size: 10px;
         margin-left: 0;
     }
-    .menu-fechado-desktop{
-        display: none;
- 
-     }.menu-fechado-mobile{
-         display: flex;
-     }
+    
     .busca-title h1{
         font-size: 15px;
         margin-left: 5px;
